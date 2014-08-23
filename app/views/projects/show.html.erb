@@ -1,0 +1,29 @@
+<p>
+  <strong>Address:</strong>
+  <%= @project.address %>
+</p>
+ 
+<p>
+  <strong>Area:</strong>
+  <%= @project.area %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @project.city %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @project.owner %>
+</p>
+
+
+<h2>Occupants</h2>
+<%= render @project.occupants %>
+
+<h2>Add an occupant:</h2>
+<%= render "occupants/form" %>
+
+
+<%= link_to 'Back', projects_path %>

@@ -1,0 +1,30 @@
+<h1>Edit Occupant</h1>
+ 
+<%= form_for @occupant do |f| %>
+
+<% if @occupant.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@occupant.errors.count, "error") %> prohibited
+      this article from being saved:</h2>
+    <ul>
+    <% @occupant.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+ 
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Back', occupants_path %>
+

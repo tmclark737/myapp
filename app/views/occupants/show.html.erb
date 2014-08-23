@@ -1,0 +1,28 @@
+<p>
+  <strong>Occupant:</strong>
+  <%= @occupant.name %>
+</p>
+
+<h2>Zones</h2>
+<% @occupant.zones.each do |zone| %>
+  <p>
+    <strong>Space:</strong>
+    <%= zone.description %>
+  </p>
+ 
+<% end %>
+ 
+<h2>Add a zone:</h2>
+<%= form_for([@occupant, @occupant.zones.build]) do |f| %>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Edit Occupant', edit_occupant_path(@occupant) %> |
+<%= link_to 'Back to Occupants', occupants_path %>

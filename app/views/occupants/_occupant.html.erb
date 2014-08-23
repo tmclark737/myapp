@@ -1,0 +1,19 @@
+<p>
+    <strong>Occupant:</strong>
+    <%= link_to occupant.name, occupant_path(occupant) %>
+    <% occupant.zones.each  do | zone| %>
+    <%= link_to zone.description, occupant_zone_path(occupant, zone) %>
+    <br>
+    <% end %>
+
+
+  </p>
+
+
+  <p>
+  <%= link_to 'Destroy Occupant', [occupant.project, occupant],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+
+
+</p>
