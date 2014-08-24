@@ -21,8 +21,10 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
 
-development:
-  <<: *default
+  development:
+  adapter: postgresql
+  host: localhost
+  username: user
   database: myapp_development
 
   # The specified database role being used to connect to postgres.
