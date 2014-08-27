@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140803000825) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "occupants", force: true do |t|
     t.string   "name"
     t.integer  "project_id"
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140803000825) do
     t.datetime "updated_at"
   end
 
-  add_index "occupants", ["project_id"], name: "index_occupants_on_project_id"
+  add_index "occupants", ["project_id"], name: "index_occupants_on_project_id", using: :btree
 
   create_table "projects", force: true do |t|
     t.string   "address"
@@ -38,6 +41,6 @@ ActiveRecord::Schema.define(version: 20140803000825) do
     t.datetime "updated_at"
   end
 
-  add_index "zones", ["occupant_id"], name: "index_zones_on_occupant_id"
+  add_index "zones", ["occupant_id"], name: "index_zones_on_occupant_id", using: :btree
 
 end
