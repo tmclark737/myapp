@@ -12,7 +12,6 @@
  *
  *= require_tree .
  *= require_self
- 
- *= require site_layers
+ *= require bootstrap.min
  */
 
