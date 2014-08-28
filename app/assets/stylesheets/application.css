@@ -13,5 +13,6 @@
  *= require_tree .
  *= require_self
  *= require bootstrap.min
+ *= custom_full_site
  */
 
