@@ -1,0 +1,30 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//Jumbotron
+.jumbotron h1, 
+.jumbotron .h1 {
+    font-size: 36px;
+    color: #FFF;
+  }
+
+//text block
+.jumbotron p, {
+	bottom: 5px;
+}
+
+
+#container h1 {
+	color:#FFF;
+	margin:0px;
+	padding:0px;
+	top:0px;
+
+}
+
+.jumbotronwidth
+{
+max-width:100%;
+}
