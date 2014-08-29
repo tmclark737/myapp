@@ -12,7 +12,8 @@
  *
 
  *= require_self
- *= custom_full_site
+
  *= require bootstrap.min
+ *= custom_full_site
  */
 
