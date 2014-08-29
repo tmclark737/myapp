@@ -1,10 +1,10 @@
-.layer_minus1 {
+.layer-mid {
 	position: relative;
-	z-index: 50;
-	top: -80px;
+	z-index: 1;
+
 }
 
-.layer0 {
+.layer-top {
 	position: relative;
 	z-index: 100;
 
