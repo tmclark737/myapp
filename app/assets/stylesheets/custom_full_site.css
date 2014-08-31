@@ -25,4 +25,6 @@ body {
 	vertical-align:text-bottom;
 }
 
-
+a:focus {
+	outline:none!important;
+}
