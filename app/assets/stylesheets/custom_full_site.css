@@ -1,5 +1,6 @@
 body {
 	margin-bottom:800px;
+	padding-top: 70px; 
 }
 
 .circle-btn {
@@ -24,7 +25,4 @@ body {
 	vertical-align:text-bottom;
 }
 
-body { 
-	padding-top: 70px; 
-}
 
