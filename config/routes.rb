@@ -15,6 +15,5 @@ end
 end
 
  root 'welcome#index'
-
 end
 
