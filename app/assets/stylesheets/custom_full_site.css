@@ -31,5 +31,15 @@ a:focus {
 
 .carousel-inner h3 {
 	font-size: 18px;
-	text-align: center;
+	text-align: left;
 }
+
+.panel{
+	background-color:#F8F8F8;
+	border-top-color: #383838;
+	border-bottom-color:#383838;
+	border-left-color:#FFFFFF;
+	border-right-color:#FFFFFF;
+	border-radius: 0px;
+}
+
