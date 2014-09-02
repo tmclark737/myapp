@@ -28,3 +28,8 @@ body {
 a:focus {
 	outline:none!important;
 }
+
+.carousel-inner h3 {
+	font-size: 18px;
+	text-align: center;
+}
