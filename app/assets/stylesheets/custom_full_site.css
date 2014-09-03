@@ -32,16 +32,19 @@ a:focus {
 .carousel-inner h3 {
 	font-size: 18px;
 	text-align: left;
+	color:#055BA4;
 }
 
-.panel{
-	background-color:#F8F8F8;
+
+
+/*.panel{
+	background-color:#5D93D2;
 	border-top-color: #383838;
 	border-bottom-color:#FFFFFF;
 	border-left-color:#FFFFFF;
 	border-right-color:#FFFFFF;
 	border-radius: 0px;
-}
+}*/
 
 
 #recc {
@@ -52,3 +55,24 @@ a:focus {
 .panel-body{
 	padding-top:0px;
 }
+
+.layer_mid {
+	position: relative;
+	z-index: 50;
+
+}
+
+.layer_top {
+	position: relative;
+	z-index: 200;
+
+}
+
+a.anchor{
+	display: block; 
+	position: relative; 
+	top: -70px; 
+	visibility: hidden;
+}
+
+
