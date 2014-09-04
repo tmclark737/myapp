@@ -3,15 +3,6 @@
         <head>
                 <title>Bootstrap 3</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                
-           <script type="text/javascript">
-$(document).ready(function () {
-$(".navbar-nav li a").click(function(event) {
-$(".navbar-collapse").collapse('hide');
-});
-});
-             </script>
-
 
         </head>
         <body style="background-color:#A9BDDB;">
@@ -34,8 +25,8 @@ $(".navbar-collapse").collapse('hide');
                                                 <li><a href = "#" class="active">Home</a></li>
                                                 <li class = "dropdown">
                                                   <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Energy Audits<b class = "caret"></b></a>
-                                                    <ul class = "dropdown-menu" data-toggle = "dropdown">
-                                                      <li><a href = "#why-audit">Why Audit?</a></li>
+                                                    <ul class = "dropdown-menu" role="menu">
+                                                      <li><a href = "#why-audit" data-target="#">Why Audit?</a></li>
                                                       <li><a href = "#">What is an Energy Audit?</a></li>
                                                       <li><a href = "#">Where do the savings come from?</a></li>
                                                       <li><a href = "#">How to select an Energy Auditor</a></li>
