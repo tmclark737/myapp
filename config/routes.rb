@@ -15,5 +15,7 @@ end
 end
 
  root 'welcome#index'
+ get '/sfenvironment', to: redirect('/#')
 end
+
 
