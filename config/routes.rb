@@ -16,6 +16,7 @@ end
 
  root 'welcome#index'
  get '/sfenvironment', to: redirect('/#')
+ get '/benchmarking', to: 'welcome#benchmarking'
 end
 
 

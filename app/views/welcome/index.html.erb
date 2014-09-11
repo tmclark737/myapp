@@ -6,53 +6,9 @@
 
         </head>
         <body style="background-color:#A9BDDB;">
+          <%= render 'layouts/navbar' %>
  
-                <div class = "navbar navbar-inverse navbar-fixed-top">
-                        <div class = "container">                               
-                                <div class="navbar-header">
-                                  <a href="#" class="brand" ><img style="padding: 2px 0px 2px 2px;" src="assets/bayefficiency_logo.png"></a>
-                                  <a href="#" class="brand-text">BAY EFFICIENCY</a>
-                                  <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-                                  <span class="icon-bar"></span>
-                                  <span class="icon-bar"></span>
-                                  <span class="icon-bar"></span>
-                                  </button>
-                                </div>
-                                <div class = "collapse navbar-collapse navHeaderCollapse">
-                               
-                                        <ul class = "nav navbar-nav navbar-right">
-                                       
-                                                <li><a href = "#" class="active">Home</a></li>
-                                                <li class = "dropdown">
-                                                  <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Energy Audits<b class = "caret"></b></a>
-                                                    <ul class = "dropdown-menu" role="menu">
-                                                      <li><a href = "#why-audit" data-target="#">Why Audit?</a></li>
-                                                      <!--<li><a href = "#">What is an Energy Audit?</a></li>-->
-                                                      <li><a href = "#where-savings-come-from">Where do the savings come from?</a></li>
-                                                      <li><a href = "#auditor-criteria">Criteria to Select an Energy Auditor</a></li>
-                                                      <!--<li><a href = "#">Easier Incentives</a></li>
-                                                      <li><a href = "#">Leasing Expertise</a></li>-->
-                                                    </ul>
-                                                </li>
-                                                <li class = "dropdown">
-                                                  <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Benchmarking<b class = "caret"></b></a>
-                                                    <ul class = "dropdown-menu">
-                                                      <li><a href = "#">What is Benchmarking?</a></li>
-                                                      <li><a href = "#">Why Benchmark?</a></li>
-                                                      <li><a href = "#">Who needs to Benchmark?</a></li>
-                                                      <li><a href = "#">AB1103</a></li>
-                                                      <li><a href = "#">San Francisco</a></li>
-                                                    </ul>
-                                                </li>
 
-                                                <li><a href = "#contact" data-toggle="modal">Contact</a></li>
-                                                <li><a href = "#">Client Login</a></li>                                       
-                                        </ul>
-                               
-                                </div>
-                               
-                        </div>
-                </div>
 
               <div style="background: url('assets/city_view.png'); background-repeat:no-repeat; background-position: top center;">
                 <div class="container" >
@@ -96,85 +52,7 @@
 
               
 
-            
-            <div class="container hidden-xs" style="padding-top:15px;" ><!--hidden-xs-->
-              <div class="panel" >
-                
-
-                      
-                      <div class="row" >
-                        
-                        <div class = "col-md-4">
-                          <div class="panel-body">
-                          <h3>What others are saying:<h3>
-                          </div>
-                        </div>
-                        
-                        <div class = "col-md-8">
-                          <div class = "panel-body">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel" ><!--data-interval="7000"-->
-                              <div class="carousel-inner" style="height:150px">
-
-
-                                <div class="item active">
-                                  <div>
-                                    <h3>"The system you designed has proven itself functionally, and has now paid for itself.  From now on, it will save us at least $20,000 annually."<h3>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div>
-                                    <h3>"Their recommendations were clearly presented and very useful."<h3>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div>
-                                    <h3>"We hired Ty Clark of Bay Efficiency in 2013 to perform an energy audit as required by the Dept of the Environment.  I googled engineers in the SF area and Ty's webpage stood out.  It was great working with Ty and I recommend him."<h3>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div>
-                                    <h3>"Thank you for the excellent service in helping us transform our needs into a coherent solution."<h3>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div>
-                                    <h3>"He was extremely busy, but extended the deadline with the City and completed the audit without any hitches."<h3>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div>
-                                    <h3>"As an HVAC engineer myself, I consult with Ty when it comes to Energy Star building benchmarking from time to time. "<h3>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div>
-                                    <h3>"The sense of being good stewards of the environment through renewable, environmentally sound technology should not go without mention and acknowledgement.  It is an intangible benefit, but real."<h3>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div>
-                                    <h3>"Ty also worked with the SF Environment Auditor to facilitate a rebate after we changed out some of our lighting."<h3>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div>
-                                    <h3>"He is quick to respond to my inquiries and gives me good advice.  Recommended."<h3>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div>
-                                    <h3>"I found the personnel of BE to be highly professional in their relations w/ myself and my tenants, did the energy usage audit in a timely manner."<h3>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-              </div>
-
-            </div>
-
+              <%= render 'layouts/others_are_saying' %>
 
 
 
@@ -262,6 +140,7 @@
                 </div>
               </div>
 
+              <a class="anchor" id="pitfalls-to-avoid"></a>
               <div class="container">
                 <div class="panel">
                   <div class="row">
@@ -273,7 +152,7 @@
                         <p>Here are 5 common pitfalls that stop good intentions before they become great projects.  Don't worry, we've got your back.<br><br>
                         5 Common Pitfalls:
                         <ol type="A">
-                          <li><a href="#TOU-rate-schedules" data-toggle="modal">A Common Oversimplification that leads to 100% Error.</a></li>
+                          <li><a href="#TOU-rates" data-toggle="modal">A Common Oversimplification that leads to 100% Error.</a></li>
                           <li><a href="#" data-toggle="modal">Too Many Choices</a></li>
                           <li><a href="#" data-toggle="modal">Sacrficing Tenant Comfort</a></li>
                           <li><a href="#simple-payback" data-toggle="modal">Making Decisions without Looking Ahead</a></li>
@@ -389,227 +268,11 @@
                 </div>
               </div>  
 
-            <a class="anchor" id="recent-clients"></a>
-            <div class="container " style="padding-top:15px;" ><!--hidden-xs-->
-              <div class="panel " >
-                <div class="row">
-                  
-                  <div class = "col-md-4">
-                    <div class="panel-body">
-                    <h3>Recent clients:<h3>
-                    </div>
-                  </div>
-                  
-                  <div class = "col-md-8">
-                    <div class = "panel-body">
-                      <div id="myCarousel" class="carousel slide" data-ride="carousel" ><!--data-interval="7000"-->
-                        <div class="carousel-inner" style="height:150px">
 
 
-                              <div class="item active">
-                                <div>
-                                  <img src="assets/client/cbre-logo.jpg" alt="" class="img-responsive center-block">
-                                </div>
-                              </div>
-
-                              <div class="item">
-                                <div>
-                                  <img src="assets/client/cac-logo.jpg" alt="" class="img-responsive center-block">
-                                </div>
-                              </div>
-
-                              <div class="item">
-                                <div>
-                                  <img src="assets/client/wyndham-logo.jpg" alt="" class="img-responsive center-block">
-                                </div>
-                              </div>
-
-                              <div class="item">
-                                <div>
-                                  <img src="assets/client/walgreens-logo.jpg" alt="" class="img-responsive center-block">
-                                </div>
-                              </div>
-
-                              <div class="item">
-                                <div>
-                                  <img src="assets/client/joie-logo.jpg" alt="" class="img-responsive center-block">
-                                </div>
-                              </div>
-
-                              <div class="item">
-                                <div>
-                                  <img src="assets/client/byer-logo.jpg" alt="" class="img-responsive center-block">
-                                </div>
-                              </div>
-
-                              <div class="item">
-                                <div>
-                                  <img src="assets/client/emcor-logo.jpg" alt="" class="img-responsive center-block">
-                                </div>
-                              </div>
-
-                              <div class="item">
-                                <div>
-                                  <img src="assets/client/cornish-logo.jpg" alt="" class="img-responsive center-block">
-                                </div>
-                              </div>
-                                                                                                                                                            
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-                </div>
-              </div>
-            </div>
-
-                <div class = "navbar navbar-default navbar-fixed-bottom" id="navbar-footer" style="background-color:#5D93D2;">
-                  <div class = "container">
-                    <a href="#contact" data-toggle="modal" class = "navbar-btn btn-danger btn pull-right">Contact Bay Efficiency</a>
-                  </div>
-                </div>
-
-
-
-<!-- MODALS-->
-                <div class = "modal fade" id="contact" role="dialog">
-                  <div class = "modal-dialog">
-                    <div class = "modal-content">
-                      <div class ="modal-header"> 
-                        <h4>Contact Bay Efficiency</h4>
-                      </div>
-
-                      <div class = "modal-body">
-                        <p>If you have any questions or want to speak more specifically about opportunities at your building please contact us on the phone or by email.</p><br><br>
-                        <img style="padding: 2px 0px 2px 2px;" src="assets/head_shot_james.png">
-                        <p>James D'Albora, M.S.<br>General Manager<br>(510) 990-5753<br>James@BayEfficiency.com</p>
-                        <p>James D'Albora has 7+ years of experience conducting and managing 1000+ energy-efficiency and solar PV audits.  He has a master's degree in Renewable Energy Policy Design and Building Sustainability.</p><br><br>
-
-                        <img style="padding: 2px 0px 2px 2px;" src="assets/head_shot_ty.png">
-                        <p>Ty Clark, PE, CEM<br>(415) 730-2710<br>Ty.Clark@BayEfficiency.com</p>
-                        <p>Ty Clark is a Professional Engineer (PE) and Certified Energy Manager (CEM).  He has 11 years of industry experience including performing and managing audits of 1000+ commercial and residential energy projects.</p>
-                      </div>
-
-                      <div class="modal-footer">
-                        <a class = "btn btn-primary" data-dismiss="modal">Close</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class = "modal fade" id="staff-experience" role="dialog">
-                  <div class = "modal-dialog">
-                    <div class = "modal-content">
-                      <div class ="modal-header"> 
-                        <h4>Bay Efficiency Staff Experience</h4>
-                      </div>
-
-                      <div class = "modal-body">
-                        <p style="font-style:italic;">"For comprehensive energy audits, the consultant should have broad experience on all types of energy efficiency projects, such as lighting, HVAC, building envelope, domestic hot water and energy equipment controls. Individuals responsible for preparing the audit should have extensive experience performing audits in facilities similar to yours. The Energy Commission’s staff recommends at least three years of experience."-California Energy Commission</p><br><br>
-                        <p>Bay Efficnecy has audited millions of square feet of commericial real estate.  
-
-                        </p>
-
-                      </div>
-
-                      <div class="modal-footer">
-                        <a class = "btn btn-primary" data-dismiss="modal">Close</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class = "modal fade" id="responsiveness" role="dialog">
-                  <div class = "modal-dialog">
-                    <div class = "modal-content">
-                      <div class ="modal-header"> 
-                        <h4>Bay Efficiency Responsiveness</h4>
-                      </div>
-
-                      <div class = "modal-body">
-                        <p style="font-style:italic;">"The consultant selected must be accessible and responsive to questions, concerns, and problems.  Even after the audit has been completed, difficulties can arise during the project bid stage or after the projects have been installed. That’s why the consultant must remain available, be accountable for the audit and demonstrate a track record of past responsiveness."-California Energy Commission</p><br><br>
-                        <p>Bay Efficnecy has audited millions of square feet of commericial real estate.  
-
-                        </p>
-
-                      </div>
-
-                      <div class="modal-footer">
-                        <a class = "btn btn-primary" data-dismiss="modal">Close</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class = "modal fade" id="conflict-of-interest" role="dialog">
-                  <div class = "modal-dialog">
-                    <div class = "modal-content">
-                      <div class ="modal-header"> 
-                        <h4>Bay Efficiency - No Conflicting Interests</h4>
-                      </div>
-
-                      <div class = "modal-body">
-                        <p style="font-style:italic;">"Your consultant should be objective and dedicated to ensuring that the recommended projects are beneficial and cost-effective. If he represents a vendor or has a vested financial interest in your projects, his objectivity may be compromised.  This could result in recommending inappropriate equipment or overstating the value of the project. That’s why each proposed consultant should identify any financial relationships with equipment vendors or service companies."-California Energy Commission</p><br><br>
-                        <p>Bay Efficnecy has audited millions of square feet of commericial real estate.  
-
-                        </p>
-
-                      </div>
-
-                      <div class="modal-footer">
-                        <a class = "btn btn-primary" data-dismiss="modal">Close</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class = "modal fade" id="references" role="dialog">
-                  <div class = "modal-dialog">
-                    <div class = "modal-content">
-                      <div class ="modal-header"> 
-                        <h4>Bay Efficiency References</h4>
-                      </div>
-
-                      <div class = "modal-body">
-                        <p style="font-style:italic;">"Preparing energy audits and installing projects are challenging tasks.  It is therefore important to check a consultant’s references carefully.  Consider only references pertaining to projects similar to yours. Ask consultants to provide information about projects that they designed, managed and commissioned.  Have them include the name of the organization, contacts, project description, project cost and savings, and consultant staff involved."-California Energy Commission</p><br><br>
-                        <p>Bay Efficnecy has audited millions of square feet of commericial real estate.  
-
-                        </p>
-
-                      </div>
-
-                      <div class="modal-footer">
-                        <a class = "btn btn-primary" data-dismiss="modal">Close</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class = "modal fade" id="staff-availability" role="dialog">
-                  <div class = "modal-dialog">
-                    <div class = "modal-content">
-                      <div class ="modal-header"> 
-                        <h4>Bay Efficiency Staff Availability</h4>
-                      </div>
-
-                      <div class = "modal-body">
-                        <p style="font-style:italic;">"The availability of qualified staff is an important consideration when selecting a consulting firm. A company may have experience doing energy project work, but if they assign inexperienced staff to do the audit, the quality of the data collection and analysis may be compromised. When evaluating consultant proposals, ask for a listing of staff who will be working on your project."-California Energy Commission</p><br><br>
-                        <p>Bay Efficnecy has audited millions of square feet of commericial real estate.  
-
-                        </p>
-
-                      </div>
-
-                      <div class="modal-footer">
-                        <a class = "btn btn-primary" data-dismiss="modal">Close</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+                <%= render 'layouts/recent_clients' %>
+                <%= render 'layouts/navbar_footer' %>
+                <%= render 'layouts/modals' %>
                 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
                 
                
