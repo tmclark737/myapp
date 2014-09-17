@@ -31,6 +31,8 @@ group :production do
   gem 'pg'
 end
 
+gem 'devise'
+
 ruby "2.0.0"
 
 
