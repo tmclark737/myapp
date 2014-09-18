@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 
+  description: MyText
+  has_capex: false
+  cost_of_capital: 1
+  finance_type: MyString
+  finance_term: 1
+  reinvest_rate: 1
+  inflation: 1
+  hourly_maintenance_cost: 1
+
+two:
+  project_id: 
+  description: MyText
+  has_capex: false
+  cost_of_capital: 1
+  finance_type: MyString
+  finance_term: 1
+  reinvest_rate: 1
+  inflation: 1
+  hourly_maintenance_cost: 1

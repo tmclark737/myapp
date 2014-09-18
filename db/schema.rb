@@ -11,16 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140912002429) do
+ActiveRecord::Schema.define(version: 20140917225922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "financials", force: true do |t|
+    t.integer  "project_id"
+    t.text     "description"
+    t.boolean  "has_capex"
+    t.integer  "cost_of_capital"
+    t.string   "finance_type"
+    t.integer  "finance_term"
+    t.integer  "reinvest_rate"
+    t.integer  "inflation"
+    t.integer  "hourly_maintenance_cost"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "financials", ["project_id"], name: "index_financials_on_project_id", using: :btree
 
   create_table "occupants", force: true do |t|
     t.string   "name"
     t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "project"
   end
 
   add_index "occupants", ["project_id"], name: "index_occupants_on_project_id", using: :btree
