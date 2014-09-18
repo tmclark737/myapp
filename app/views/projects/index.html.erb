@@ -1,29 +1,32 @@
-<h1>Listing projects</h1>
-<%= link_to 'New Project', new_project_path %>
+<div class="container">
 
- 
-<table>
-  <tr>
-    <th>Building</th>
-    <th>Area</th>
-    <th>City</th>
-    <th>Owner</th>
-  </tr>
- 
-  <% @projects.each do |project| %>
+  <h1>Listing projects</h1>
+  <%= link_to 'New Project', new_project_path %>
+
+   
+  <table>
     <tr>
-      <td><%= project.address %></td>
-      <td><%= project.area %></td>
-      <td><%= project.city %></td>
-      <td><%= project.owner %></td>
-
-  <td><%= link_to 'Show', project_path(project) %></td>
-  <td><%= link_to 'Edit', edit_project_path(project) %></td>
-  <td><%= link_to 'Destroy', project_path(project),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <th>Building</th>
+      <th>Area</th>
+      <th>City</th>
+      <th>Owner</th>
     </tr>
-  <% end %>
+   
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.address %></td>
+        <td><%= project.area %></td>
+        <td><%= project.city %></td>
+        <td><%= project.owner %></td>
+
+    <td><%= link_to 'Show', project_path(project) %></td>
+    <td><%= link_to 'Edit', edit_project_path(project) %></td>
+    <td><%= link_to 'Destroy', project_path(project),
+                      method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
 
 
-</table>
+  </table>
 
+</div>

@@ -37,8 +37,8 @@ def edit
 end
 
 def index
-	#@projects = Project.all
-  @projects = current_user.projects
+	@projects = Project.all
+  #@projects = current_user.projects
 end
 
 
