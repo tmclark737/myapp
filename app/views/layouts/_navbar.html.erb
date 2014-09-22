@@ -37,7 +37,7 @@
                                             </ul>
                                          </li>
 
-                                         <li><a href = "#contact" data-toggle="modal" onclick="_gaq.push(['_trackPageview', '/virtual/modal/contact.html']);">Contact</a></li>
+                                         <li><a href = "#contact" data-toggle="modal" onclick="ga('send', 'event', 'Button', 'Click', 'Contact');">Contact</a></li>
                                          <li><% if user_signed_in? %>
                                           <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
                                           <% else %>
