@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  zone_id: 
+  quantity: 1
+  years_installed: 1
+  existing: 
+
+two:
+  zone_id: 
+  quantity: 1
+  years_installed: 1
+  existing: 

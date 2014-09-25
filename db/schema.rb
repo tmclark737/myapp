@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140917225922) do
+ActiveRecord::Schema.define(version: 20140924230323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "equipment", force: true do |t|
+    t.integer  "zone_id"
+    t.integer  "quantity"
+    t.integer  "years_installed"
+    t.binary   "existing"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "equipment", ["zone_id"], name: "index_equipment_on_zone_id", using: :btree
 
   create_table "financials", force: true do |t|
     t.integer  "project_id"
