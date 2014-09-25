@@ -33,13 +33,6 @@ end
 
 gem 'devise'
 
-#Ty add on 9/25 for active admin
-#gem 'actionpack'#, '~> 3.1.0.alpha'
-
-gem 'activeadmin', github: 'activeadmin'
-#gem 'sass-rails'
-#gem "meta_search",    '>= 1.1.0.pre'
-
 ruby "2.0.0"
 
 
