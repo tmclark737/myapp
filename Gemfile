@@ -6,7 +6,7 @@ gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+#gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -32,6 +32,13 @@ group :production do
 end
 
 gem 'devise'
+
+#Ty add on 9/25 for active admin
+#gem 'actionpack'#, '~> 3.1.0.alpha'
+
+gem 'activeadmin', github: 'activeadmin'
+#gem 'sass-rails'
+#gem "meta_search",    '>= 1.1.0.pre'
 
 ruby "2.0.0"
 
