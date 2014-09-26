@@ -1,4 +1,4 @@
-ActiveAdmin.register Project do
+ActiveAdmin.register Equipment do
 
 
   # See permitted parameters documentation:
@@ -14,8 +14,6 @@ ActiveAdmin.register Project do
   #   permitted
   # end
 
-permit_params :address, :area, :city, :owner
-
-
+permit_params :zone, :quantity, :years_installed, :existing
 
 end
