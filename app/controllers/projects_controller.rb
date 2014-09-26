@@ -49,9 +49,12 @@ def destroy
   redirect_to projects_path
 end
 
+
+
 private
   def project_params
     params.require(:project).permit(:address, :area, :city, :owner)
   end
 
 end
+

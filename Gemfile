@@ -33,6 +33,8 @@ end
 
 gem 'devise'
 
+gem 'activeadmin', github: 'activeadmin'
+
 ruby "2.0.0"
 
 
