@@ -14,5 +14,8 @@ has_many :occupants, dependent: :destroy
     validates :owner, presence: true,
                     length: { minimum: 2 }
 
+def to_s
+	address
+end
 
 end
