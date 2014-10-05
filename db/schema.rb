@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140925234451) do
+ActiveRecord::Schema.define(version: 20141005172013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -112,6 +112,26 @@ ActiveRecord::Schema.define(version: 20140925234451) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "utility_rates", force: true do |t|
+    t.string   "sch_name"
+    t.datetime "peak_start"
+    t.datetime "peak_stop"
+    t.datetime "part_start"
+    t.datetime "part_stop"
+    t.integer  "customer_charge"
+    t.integer  "summer_energy_peak"
+    t.integer  "summer_energy_part"
+    t.integer  "summer_energy_off"
+    t.integer  "winter_energy_part"
+    t.integer  "winter_energy_off"
+    t.integer  "summer_demand"
+    t.integer  "winter_demand"
+    t.integer  "pdp_energy"
+    t.integer  "pdp_demand"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "zones", force: true do |t|
     t.string   "description"

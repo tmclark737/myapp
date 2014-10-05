@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sch_name: MyString
+  peak_start: 2014-10-05 10:20:13
+  peak_stop: 2014-10-05 10:20:13
+  part_start: 2014-10-05 10:20:13
+  part_stop: 2014-10-05 10:20:13
+  customer_charge: 1
+  summer_energy_peak: 1
+  summer_energy_part: 1
+  summer_energy_off: 1
+  winter_energy_part: 1
+  winter_energy_off: 1
+  summer_demand: 1
+  winter_demand: 1
+  pdp_energy: 1
+  pdp_demand: 1
+
+two:
+  sch_name: MyString
+  peak_start: 2014-10-05 10:20:13
+  peak_stop: 2014-10-05 10:20:13
+  part_start: 2014-10-05 10:20:13
+  part_stop: 2014-10-05 10:20:13
+  customer_charge: 1
+  summer_energy_peak: 1
+  summer_energy_part: 1
+  summer_energy_off: 1
+  winter_energy_part: 1
+  winter_energy_off: 1
+  summer_demand: 1
+  winter_demand: 1
+  pdp_energy: 1
+  pdp_demand: 1
