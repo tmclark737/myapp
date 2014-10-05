@@ -1,0 +1,3 @@
+rails generate model Article title:string text:text
+
+rails generate model Utility_rate sch_name:string peak_start:timestamp peak_stop:timestamp part_start:timestamp part_stop:timestamp customer_charge:integer summer_energy_peak:integer summer_energy_part:integer summer_energy_off:integer winter_energy_part:integer winter_energy_off:integer summer_demand:integer winter_demand:integer pdp_energy:integer pdp_demand:integer

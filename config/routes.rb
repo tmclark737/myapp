@@ -20,6 +20,8 @@ end
  root 'welcome#index'
  get '/sfenvironment', to: redirect('/#')
  get '/benchmarking', to: 'welcome#benchmarking'
+
+ get '/learning/time', to: 'learning#time'
 end
 
 
