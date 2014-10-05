@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  w_day_start: 2014-10-05 10:38:46
+  w_day_stop: 2014-10-05 10:38:46
+  w_end_start: 2014-10-05 10:38:46
+  w_end_stop: 2014-10-05 10:38:46
+  note: MyText
+
+two:
+  name: MyString
+  w_day_start: 2014-10-05 10:38:46
+  w_day_stop: 2014-10-05 10:38:46
+  w_end_start: 2014-10-05 10:38:46
+  w_end_stop: 2014-10-05 10:38:46
+  note: MyText
