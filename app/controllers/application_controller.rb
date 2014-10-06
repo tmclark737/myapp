@@ -6,10 +6,14 @@ class ApplicationController < ActionController::Base
 
   helper_method :inside_addition
 
-def inside_addition
-	result = 1+20215
-	return result
-	
-end
+	#start TMC add for learning/time
+	def inside_addition
+		result = 1+20215
+		return result
+	end
+	#end TMC add for learning/time
+
+
+
 
 end

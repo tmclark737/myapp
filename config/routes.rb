@@ -22,6 +22,8 @@ end
  get '/benchmarking', to: 'welcome#benchmarking'
 
  get '/learning/time', to: 'learning#time'
+
+ get '/schedules', to: 'schedules#index'
 end
 
 
