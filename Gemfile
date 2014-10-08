@@ -37,6 +37,15 @@ gem 'activeadmin', github: 'activeadmin'
 
 ruby "2.0.0"
 
+group :development do
+	gem 'pry'
+	gem 'pry-rails'
+	gem 'better_errors'
+	gem 'binding_of_caller'
+
+
+end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

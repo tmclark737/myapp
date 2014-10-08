@@ -1,4 +1,4 @@
-ActiveAdmin.register Timetable do
+ActiveAdmin.register TimeTable do
 
 
   # See permitted parameters documentation:

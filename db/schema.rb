@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141006002841) do
+ActiveRecord::Schema.define(version: 20141008234749) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 20141006002841) do
 
   create_table "time_tables", force: true do |t|
     t.string   "name"
-    t.datetime "w_day_start"
+    t.datetime "w_day_begin"
     t.datetime "w_day_stop"
     t.datetime "w_end_start"
     t.datetime "w_end_stop"
