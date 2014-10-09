@@ -1,0 +1,13 @@
+data = [{name: 'setomhing', cost: 50}, {name: 'something else', cost: 100}]
+
+TimeTable = Struct.new(:weekend_start, :weekend_stop)
+
+data = [TimeTable.new(8, 4)]
+
+class SomeKindofCalculator
+  def do_some_calculation(input_data)
+  return 'magic'
+  end
+end
+
+SomeKindofCalculator.new.do_some_calculation(data)

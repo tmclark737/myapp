@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141008234749) do
+ActiveRecord::Schema.define(version: 20141009002457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,11 +95,11 @@ ActiveRecord::Schema.define(version: 20141008234749) do
     t.datetime "updated_at"
   end
 
-  create_table "time_tables", force: true do |t|
+  create_table "schedules", force: true do |t|
     t.string   "name"
     t.datetime "w_day_begin"
     t.datetime "w_day_stop"
-    t.datetime "w_end_start"
+    t.datetime "w_end_begin"
     t.datetime "w_end_stop"
     t.text     "note"
     t.datetime "created_at"
@@ -126,9 +126,9 @@ ActiveRecord::Schema.define(version: 20141008234749) do
 
   create_table "utility_rates", force: true do |t|
     t.string   "sch_name"
-    t.datetime "peak_start"
+    t.datetime "peak_begin"
     t.datetime "peak_stop"
-    t.datetime "part_start"
+    t.datetime "part_begin"
     t.datetime "part_stop"
     t.integer  "customer_charge"
     t.integer  "summer_energy_peak"
