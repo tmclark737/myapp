@@ -15,7 +15,7 @@ ActiveAdmin.register Schedule do
   # end
 
 
-permit_params :name, :w_day_start, :w_day_stop, :w_end_start, :w_end_stop
+permit_params :name, :w_day_begin, :w_day_stop, :w_end_begin, :w_end_stop
 
 
 end
