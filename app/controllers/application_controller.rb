@@ -8,11 +8,24 @@ class ApplicationController < ActionController::Base
 
 	#start TMC add for learning/time
 	def inside_addition
-		result = 1+20215
+		result = 11+2215
 		return result
 	end
 	#end TMC add for learning/time
 
+  def hello() puts "hello world!" end
+
+
+
+
+
+  def scheduleCalculation ()
+
+Schedule.create ([{:name => '24x7 number 2', :w_day_begin => '2000-01-01 00:00:01', :w_day_stop => '2000-01-01 11:59:59', :w_end_begin => '2000-01-01 00:00:01', :w_end_stop => '2000-01-01 11:59:59'}])
+
+
+  return Schedule.first
+  end
 
 
 

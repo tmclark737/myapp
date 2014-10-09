@@ -11,3 +11,16 @@ class SomeKindofCalculator
 end
 
 SomeKindofCalculator.new.do_some_calculation(data)
+
+
+
+Schedule = Struct.new(:name, :w_day_begin, :w_day_stop, :w_end_begin, :w_end_stop, :note)
+
+data = [schedule.new('24x7', '2000-01-01 00:00:01', '2000-01-01 11:59:59', '2000-01-01 00:00:01', '2000-01-01 11:59:59', 'this is a note')]
+
+
+class scheduleCalculator
+  def scheduleCalculation(data)
+  return :name
+  end
+end
