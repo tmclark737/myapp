@@ -6,5 +6,5 @@ class Schedule < ActiveRecord::Base
   	(w_day_stop-w_day_begin)/(60*60)
   end
 
-
+  
 end
