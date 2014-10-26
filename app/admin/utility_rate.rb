@@ -14,5 +14,7 @@ ActiveAdmin.register UtilityRate do
   #   permitted
   # end
 
+permit_params :sch_name, :peak_begin, :peak_stop, :part_begin, :part_stop, :customer_charge, :summer_energy_peak, :summer_energy_part, :summer_energy_off, :winter_energy_part, :winter_energy_off, :summer_demand, :winter_demand, :pdp_energy, :pdp_demand
+
 
 end
