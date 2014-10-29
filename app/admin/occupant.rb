@@ -15,7 +15,7 @@ ActiveAdmin.register Occupant do
   # end
 
 
-permit_params :name
+permit_params :name, :project_id
 
 
 end

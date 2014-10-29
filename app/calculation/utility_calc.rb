@@ -6,6 +6,18 @@ class UtilityCalc
   #  @equipment = equipment
   #end 
 
+  def print_equipments()
+      project = Project.find(1)
+      project.occupants.each do |occupant|
+        occupant.zones.each do |zone|
+          zone.equipments.each do |equipment|
+            puts equipment
+          end
+        end 
+      end
+  end
+
+
   def d_peak_begin()
     puts "Please enter the schedule_id:"
     schedule_id = gets.chomp
@@ -16,8 +28,6 @@ class UtilityCalc
     schedule = Schedule.find(schedule_id)
     puts utility.peak_begin
     (utility.peak_begin - schedule.w_day_begin)/3600
-
-
 
   end
 
