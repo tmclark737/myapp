@@ -18,6 +18,18 @@ class UtilityCalc
   end
 
 
+
+
+  def utl_energy_rate
+    puts "Please enter the equipment_id:"
+    equipment_id = gets.chomp
+    equipment = Equipment.find(equipment_id)
+    equipment.schedule
+    equipment.zone.occupant
+
+  end
+
+
   def d_peak_begin()
     puts "Please enter the schedule_id:"
     schedule_id = gets.chomp
