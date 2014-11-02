@@ -1,7 +1,10 @@
 class Part < ActiveRecord::Base
-  
-  belongs_to :equipment
-  #belongs_to :partable, polymorphic: true
+  has_many :equipments
+  belongs_to :light
+  #has_many :lights
+  #belongs_to :part
+  #belongs_to :equipment
+  #belongs_to :part_info_id, :polymorphic => true
   #has_one :parts, as: :partable
 
 
