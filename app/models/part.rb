@@ -1,6 +1,7 @@
 class Part < ActiveRecord::Base
   has_many :equipments
   belongs_to :light
+  belongs_to :hvac
   #has_many :lights
   #belongs_to :part
   #belongs_to :equipment
