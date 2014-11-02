@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102040100) do
+ActiveRecord::Schema.define(version: 20141102041345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,29 @@ ActiveRecord::Schema.define(version: 20141102040100) do
   end
 
   add_index "financials", ["project_id"], name: "index_financials_on_project_id", using: :btree
+
+  create_table "hvacs", force: true do |t|
+    t.integer  "kw_saved"
+    t.integer  "kwh_saved"
+    t.integer  "therm_saved"
+    t.integer  "hrs_to_replace"
+    t.integer  "hvac_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "hvacs", ["hvac_id"], name: "index_hvacs_on_hvac_id", using: :btree
+
+  create_table "lights", force: true do |t|
+    t.binary   "occ_sensor_base"
+    t.integer  "space_type_id"
+    t.integer  "light_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lights", ["light_id"], name: "index_lights_on_light_id", using: :btree
+  add_index "lights", ["space_type_id"], name: "index_lights_on_space_type_id", using: :btree
 
   create_table "occupants", force: true do |t|
     t.string   "name"

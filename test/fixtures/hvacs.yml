@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kw_saved: 1
+  kwh_saved: 1
+  therm_saved: 1
+  hrs_to_replace: 1
+  hvac_id: 
+
+two:
+  kw_saved: 1
+  kwh_saved: 1
+  therm_saved: 1
+  hrs_to_replace: 1
+  hvac_id: 
