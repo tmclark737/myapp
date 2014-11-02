@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102203143) do
+ActiveRecord::Schema.define(version: 20141102204142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,6 +90,17 @@ ActiveRecord::Schema.define(version: 20141102203143) do
   end
 
   add_index "hvacs", ["hvac_id"], name: "index_hvacs_on_hvac_id", using: :btree
+
+  create_table "incentives", force: true do |t|
+    t.string   "description"
+    t.integer  "kwh"
+    t.integer  "kw"
+    t.integer  "qty"
+    t.decimal  "max_percent"
+    t.integer  "addon_option_qty"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "lights", force: true do |t|
     t.integer  "space_type_id"

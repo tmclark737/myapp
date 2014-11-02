@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  kwh: 1
+  kw: 1
+  qty: 1
+  max_percent: 9.99
+  addon_option_qty: 1
+
+two:
+  description: MyString
+  kwh: 1
+  kw: 1
+  qty: 1
+  max_percent: 9.99
+  addon_option_qty: 1
