@@ -86,20 +86,21 @@ class UtilityCalc
     peak_hours + part_hours_summer + off_peak_hours_summer + part_hours_winter + off_peak_hours_winter
   end
 
-
-
-
-
-
-  def d_peak_begin2()
-    puts "Please enter the equipment_id:"
-    equipment_id = gets.chomp
-    equipment = Equipment.find(equipment_id)
-    schedule = equipment.schedule
-    utility = equipment.zone.occupant.utility_rate
-    (utility.peak_begin - schedule.w_day_begin)/3600
-
+  def avoided_energy_cost
+    utility = @equipment.zone.occupant.utility_rate
+    ((peak_hours * utility.summer_energy_peak) + (part_hours_summer * utility.summer_energy_part) + (off_peak_hours_summer * utility.summer_energy_off) + (part_hours_winter * utility.winter_energy_part) + (off_peak_hours_winter * utility.winter_energy_off))/100000
   end
+
+  def demand_rate
+    utility = @equipment.zone.occupant.utility_rate
+    ((6*utility.summer_demand) + (6*utility.winter_demand))/100
+  end
+
+  def energy_rate
+    avoided_energy_cost/total_hours
+  end
+
+
 
     def print_equipments()
       project = Project.find(1)
