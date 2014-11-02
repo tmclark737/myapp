@@ -14,5 +14,6 @@ ActiveAdmin.register Light do
   #   permitted
   # end
 
+permit_params :occ_sensor_base, :space_type_id, :light_id
 
 end

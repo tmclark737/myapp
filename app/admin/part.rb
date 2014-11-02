@@ -14,5 +14,7 @@ ActiveAdmin.register Part do
   #   permitted
   # end
 
+permit_params :install_hrs, :part_info_id, :part_info_type, :cost, :purchase_url, :picture_url, :incentive_id, :description
 
 end
+

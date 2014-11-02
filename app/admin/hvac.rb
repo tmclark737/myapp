@@ -14,5 +14,18 @@ ActiveAdmin.register Hvac do
   #   permitted
   # end
 
+permit_params :kw_saved, :kwh_saved, :therm_saved, :hrs_to_replace, :hvac_id
 
 end
+
+
+
+  create_table "hvacs", force: true do |t|
+    t.integer  "kw_saved"
+    t.integer  "kwh_saved"
+    t.integer  "therm_saved"
+    t.integer  "hrs_to_replace"
+    t.integer  "hvac_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
