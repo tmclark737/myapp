@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  install_hrs: 1
+  part_info_id_id: 
+  part_info_type: 1
+  cost: 1
+  purchase_url: MyString
+  picture_url: MyString
+  incentive_id_id: 
+  description: MyString
+
+two:
+  install_hrs: 1
+  part_info_id_id: 
+  part_info_type: 1
+  cost: 1
+  purchase_url: MyString
+  picture_url: MyString
+  incentive_id_id: 
+  description: MyString

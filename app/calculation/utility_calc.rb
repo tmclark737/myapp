@@ -2,9 +2,7 @@
 
 
 class UtilityCalc
-  #def initialize(equipment)
-  #  @equipment = equipment
-  #end 
+
 
   def equip_id()
     puts "Please enter the equipment_id:"
