@@ -1,7 +1,7 @@
 class Light < ActiveRecord::Base
   
 
-
+  belongs_to :light_code
   has_many :parts
 
 
