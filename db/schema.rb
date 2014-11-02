@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102204142) do
+ActiveRecord::Schema.define(version: 20141102205012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,6 +78,32 @@ ActiveRecord::Schema.define(version: 20141102204142) do
   end
 
   add_index "financials", ["project_id"], name: "index_financials_on_project_id", using: :btree
+
+  create_table "hvac_codes", force: true do |t|
+    t.string   "description"
+    t.string   "tag"
+    t.string   "make"
+    t.string   "model"
+    t.string   "serial"
+    t.string   "condition"
+    t.integer  "hours_hvac_life"
+    t.string   "cooling_capacity"
+    t.string   "cooling_efficiency"
+    t.string   "heating_capacity"
+    t.string   "heating_efficiency"
+    t.string   "refrigerant"
+    t.string   "hours_description"
+    t.boolean  "economizer_ysn"
+    t.string   "filter_status"
+    t.string   "thermostat_type"
+    t.string   "heat_setpoint"
+    t.string   "cool_setpoint"
+    t.integer  "replace_equip_cost"
+    t.decimal  "replace_install_hours"
+    t.string   "pic_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "hvacs", force: true do |t|
     t.integer  "kw_saved"

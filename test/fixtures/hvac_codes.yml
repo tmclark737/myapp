@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  tag: MyString
+  make: MyString
+  model: MyString
+  serial: MyString
+  condition: MyString
+  hours_hvac_life: 1
+  cooling_capacity: MyString
+  cooling_efficiency: MyString
+  heating_capacity: MyString
+  heating_efficiency: MyString
+  refrigerant: MyString
+  hours_description: MyString
+  economizer_ysn: false
+  filter_status: MyString
+  thermostat_type: MyString
+  heat_setpoint: MyString
+  cool_setpoint: MyString
+  replace_equip_cost: 1
+  replace_install_hours: 9.99
+  pic_link: MyString
+
+two:
+  description: MyString
+  tag: MyString
+  make: MyString
+  model: MyString
+  serial: MyString
+  condition: MyString
+  hours_hvac_life: 1
+  cooling_capacity: MyString
+  cooling_efficiency: MyString
+  heating_capacity: MyString
+  heating_efficiency: MyString
+  refrigerant: MyString
+  hours_description: MyString
+  economizer_ysn: false
+  filter_status: MyString
+  thermostat_type: MyString
+  heat_setpoint: MyString
+  cool_setpoint: MyString
+  replace_equip_cost: 1
+  replace_install_hours: 9.99
+  pic_link: MyString
