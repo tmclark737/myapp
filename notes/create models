@@ -22,3 +22,10 @@ schedule = Schedule.create(name:"M-F 8-5", w_day_begin:"2010-01-01 08:00:00", w_
 rails generate model Part install_hrs:integer part_info:references part_info_type:integer cost:integer purchase_url:string picture_url:string incentive:references description:string
 rails generate model Light occ_sensor_base:binary space_type:references light:references
 rails generate model HVAC kw_saved:integer kwh_saved:integer therm_saved:integer hrs_to_replace:integer hvac:references
+
+rails generate model Incentive description:string kwh:integer kw:integer qty:integer max_percent:decimal addon_option_qty:integer
+rails generate model Hvac_code description:string tag:string make:string model:string serial:string condition:string hours_hvac_life:integer cooling_capacity:string cooling_efficiency:string heating_capacity:string heating_efficiency:string refrigerant:string hours_description:string economizer_ysn:boolean filter_status:string thermostat_type:string heat_setpoint:string cool_setpoint:string replace_equip_cost:integer replace_install_hours:decimal pic_link:string
+rails generate model Light_code check_date:date fixture_description:string fixture_code:string lamp_code:string lamps_per_fixture:integer w_per_lamp:float ballast:string ballast_factor:float kw_per_fixture:float note:string design_lumens:integer cri:integer lamp_life_hours:integer ballast_life_hours:integer base_type:string lamp_type:string relamp_glass_cost:integer relamp_install_hours:float replace_ballast_cost:integer reballast_install_hours:float pic_link:string 
+rails generate model Occ_sensor space_type:string savings_pct:float
+
+

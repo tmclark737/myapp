@@ -1,0 +1,26 @@
+psql --username=postgres
+
+list all of the databases
+\list
+
+switch databases
+\connect DBNAME
+\connect myapp_development
+
+list all of the tables
+\dt
+
+show table schema
+\d+ tablename
+
+C:\Users\user\SkyDrive\Desktop\occ_sensor.csv
+
+COPY occ_sensors FROM E'C:\\Users\\user\\SkyDrive\\Desktop\\postgres\\occ_sensor.csv';
+COPY occ_sensors FROM E'C:/Users/user/SkyDrive/Desktop/occ_sensor.csv';
+COPY country FROM '/usr1/proj/bray/sql/country_data';
+
+COPY data_table from E'C:\\tmp\\outputdata.csv'
+
+copy table_name(city, zipcode) from 
+
+COPY occ_sensors(space_type, savings_pct) FROM 'C:\\Users\\user\\SkyDrive\\Desktop\\postgres\\occ_sensor.csv';
