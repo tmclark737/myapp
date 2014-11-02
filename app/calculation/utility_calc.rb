@@ -6,7 +6,93 @@ class UtilityCalc
   #  @equipment = equipment
   #end 
 
-  def print_equipments()
+  def equip_id()
+    puts "Please enter the equipment_id:"
+    equipment_id = gets.chomp
+    @equipment = Equipment.find(equipment_id)
+  end
+
+  def peak_begin()
+    schedule = @equipment.schedule
+    utility = @equipment.zone.occupant.utility_rate
+    hours = (utility.peak_begin - schedule.w_day_begin)/3600
+    if hours > 0 then
+      hours = 0
+    end
+    hours
+
+  end
+
+  def peak_stop()
+    schedule = @equipment.schedule
+    utility = @equipment.zone.occupant.utility_rate
+    hours =-(utility.peak_stop - schedule.w_day_stop)/3600
+
+    if hours > 0 then
+      hours = 0
+    end
+    hours
+  end
+
+  def part_begin()
+    schedule = @equipment.schedule
+    utility = @equipment.zone.occupant.utility_rate
+    hours = (utility.part_begin - schedule.w_day_begin)/3600
+    if hours > 0 then
+      hours = 0
+    end
+    hours
+
+  end
+  def part_stop()
+    schedule = @equipment.schedule
+    utility = @equipment.zone.occupant.utility_rate
+    hours =-(utility.part_stop - schedule.w_day_stop)/3600
+
+    if hours > 0 then
+      hours = 0
+    end
+    hours
+  end
+
+  def peak_hours()
+    (6 + (peak_begin + peak_stop)) * ((5 * 26.07143) - 4)
+  end
+
+  def part_hours_summer()
+    (13 + part_begin + part_stop) * ((5 * 26.07143) - 4) - peak_hours
+  end
+
+  def off_peak_hours_summer()
+    schedule = @equipment.schedule
+    weekday_hours = ((schedule.w_day_stop - schedule.w_day_begin)/3600)* ((5 * 26.07143) - 4) -peak_hours - part_hours_summer
+    weekend_hours = ((schedule.w_end_stop - schedule.w_end_begin)/3600) * ((2 * 26.07143) + 4)
+    weekday_hours+weekend_hours
+
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+  def d_peak_begin2()
+    puts "Please enter the equipment_id:"
+    equipment_id = gets.chomp
+    equipment = Equipment.find(equipment_id)
+    schedule = equipment.schedule
+    utility = equipment.zone.occupant.utility_rate
+    (utility.peak_begin - schedule.w_day_begin)/3600
+
+  end
+
+    def print_equipments()
       project = Project.find(1)
       project.occupants.each do |occupant|
         occupant.zones.each do |zone|
@@ -18,19 +104,7 @@ class UtilityCalc
   end
 
 
-
-
-  def utl_energy_rate
-    puts "Please enter the equipment_id:"
-    equipment_id = gets.chomp
-    equipment = Equipment.find(equipment_id)
-    equipment.schedule
-    equipment.zone.occupant
-
-  end
-
-
-  def d_peak_begin()
+  def utl_energy_rate()
     puts "Please enter the schedule_id:"
     schedule_id = gets.chomp
     puts "Thanks!"
