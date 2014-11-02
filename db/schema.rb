@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102041345) do
+ActiveRecord::Schema.define(version: 20141102192948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,8 +57,10 @@ ActiveRecord::Schema.define(version: 20141102041345) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "schedule_id"
+    t.integer  "part_id"
   end
 
+  add_index "equipment", ["part_id"], name: "index_equipment_on_part_id", using: :btree
   add_index "equipment", ["zone_id"], name: "index_equipment_on_zone_id", using: :btree
 
   create_table "financials", force: true do |t|
@@ -90,11 +92,11 @@ ActiveRecord::Schema.define(version: 20141102041345) do
   add_index "hvacs", ["hvac_id"], name: "index_hvacs_on_hvac_id", using: :btree
 
   create_table "lights", force: true do |t|
-    t.binary   "occ_sensor_base"
     t.integer  "space_type_id"
     t.integer  "light_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "occ_sensor_base"
   end
 
   add_index "lights", ["light_id"], name: "index_lights_on_light_id", using: :btree
@@ -112,7 +114,6 @@ ActiveRecord::Schema.define(version: 20141102041345) do
   add_index "occupants", ["project_id"], name: "index_occupants_on_project_id", using: :btree
 
   create_table "parts", force: true do |t|
-    t.integer  "install_hrs"
     t.integer  "part_info_id"
     t.integer  "part_info_type"
     t.integer  "cost"
@@ -122,6 +123,7 @@ ActiveRecord::Schema.define(version: 20141102041345) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "install_hrs"
   end
 
   add_index "parts", ["incentive_id"], name: "index_parts_on_incentive_id", using: :btree

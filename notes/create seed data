@@ -1,4 +1,7 @@
  Schedule.create ([{:name => '24x7 number 3', :w_day_begin => '2000-01-01 00:00:01', :w_day_stop => '2000-01-01 11:59:59', :w_end_begin => '2000-01-01 00:00:01', :w_end_stop => '2000-01-01 11:59:59'}])
 
 
- 
+ Part.create ([{:install_hrs => 0.25, :part_info_type => 1, :description => 'T8 - 4 Foot 2 Lamp - 32W Fluorescent - Rapid Start Ballast, NLO - 700 Series'}])
+ Light.create ([{:occ_sensor_base => '1', :space_type_id => '1', :light_id => '1'}])
+ Hvac.create ([{:kw_saved => 44, :kwh_saved => 555, :therm_saved => 0, :hrs_to_replace => 50000, :hvac_id => 1}])
+

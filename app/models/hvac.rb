@@ -1,4 +1,4 @@
 class Hvac < ActiveRecord::Base
-  has_many :parts, as: :partable
-  
+  #has_many :parts, as: :partable
+
 end

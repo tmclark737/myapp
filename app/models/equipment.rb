@@ -3,3 +3,4 @@ class Equipment < ActiveRecord::Base
   belongs_to :schedule
   has_one :part
 end
+
