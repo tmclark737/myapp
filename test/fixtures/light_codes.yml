@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  check_date: 2014-11-02
+  fixture_description: MyString
+  fixture_code: MyString
+  lamp_code: MyString
+  lamps_per_fixture: 1
+  w_per_lamp: 1.5
+  ballast: MyString
+  ballast_factor: 1.5
+  kw_per_fixture: 1.5
+  note: MyString
+  design_lumens: 1
+  cri: 1
+  lamp_life_hours: 1
+  ballast_life_hours: 1
+  base_type: MyString
+  lamp_type: MyString
+  relamp_glass_cost: 1
+  relamp_install_hours: 1.5
+  replace_ballast_cost: 1
+  reballast_install_hours: 1.5
+  pic_link: MyString
+
+two:
+  check_date: 2014-11-02
+  fixture_description: MyString
+  fixture_code: MyString
+  lamp_code: MyString
+  lamps_per_fixture: 1
+  w_per_lamp: 1.5
+  ballast: MyString
+  ballast_factor: 1.5
+  kw_per_fixture: 1.5
+  note: MyString
+  design_lumens: 1
+  cri: 1
+  lamp_life_hours: 1
+  ballast_life_hours: 1
+  base_type: MyString
+  lamp_type: MyString
+  relamp_glass_cost: 1
+  relamp_install_hours: 1.5
+  replace_ballast_cost: 1
+  reballast_install_hours: 1.5
+  pic_link: MyString

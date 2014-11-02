@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102205012) do
+ActiveRecord::Schema.define(version: 20141102205901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -124,6 +124,32 @@ ActiveRecord::Schema.define(version: 20141102205012) do
     t.integer  "qty"
     t.decimal  "max_percent"
     t.integer  "addon_option_qty"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "light_codes", force: true do |t|
+    t.date     "check_date"
+    t.string   "fixture_description"
+    t.string   "fixture_code"
+    t.string   "lamp_code"
+    t.integer  "lamps_per_fixture"
+    t.float    "w_per_lamp"
+    t.string   "ballast"
+    t.float    "ballast_factor"
+    t.float    "kw_per_fixture"
+    t.string   "note"
+    t.integer  "design_lumens"
+    t.integer  "cri"
+    t.integer  "lamp_life_hours"
+    t.integer  "ballast_life_hours"
+    t.string   "base_type"
+    t.string   "lamp_type"
+    t.integer  "relamp_glass_cost"
+    t.float    "relamp_install_hours"
+    t.integer  "replace_ballast_cost"
+    t.float    "reballast_install_hours"
+    t.string   "pic_link"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
