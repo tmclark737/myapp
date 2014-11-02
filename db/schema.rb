@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102205901) do
+ActiveRecord::Schema.define(version: 20141102210209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -164,6 +164,13 @@ ActiveRecord::Schema.define(version: 20141102205901) do
 
   add_index "lights", ["light_id"], name: "index_lights_on_light_id", using: :btree
   add_index "lights", ["space_type_id"], name: "index_lights_on_space_type_id", using: :btree
+
+  create_table "occ_sensors", force: true do |t|
+    t.string   "space_type"
+    t.float    "savings_pct"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "occupants", force: true do |t|
     t.string   "name"
