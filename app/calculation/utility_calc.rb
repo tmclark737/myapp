@@ -56,7 +56,7 @@ class UtilityCalc
   end
 
   def peak_hours()
-    (6 + (peak_begin + peak_stop)) * ((5 * 26.07143) - 4)
+    (6 + peak_begin + peak_stop) * ((5 * 26.07143) - 4)
   end
 
   def part_hours_summer()
@@ -71,11 +71,20 @@ class UtilityCalc
 
   end
 
+  def part_hours_winter
+    (13 + part_begin + part_stop) * ((5 * 26.07143) - 8)
+  end
 
+  def off_peak_hours_winter
+    schedule = @equipment.schedule
+    weekday_hours = ((schedule.w_day_stop - schedule.w_day_begin)/3600)* ((5 * 26.07143) - 8) -peak_hours - part_hours_summer
+    weekend_hours = ((schedule.w_end_stop - schedule.w_end_begin)/3600) * ((2 * 26.07143) + 8)
+    weekday_hours+weekend_hours
+  end
 
-
-
-
+  def total_hours
+    peak_hours + part_hours_summer + off_peak_hours_summer + part_hours_winter + off_peak_hours_winter
+  end
 
 
 
