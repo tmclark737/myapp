@@ -1,6 +1,6 @@
 class Equipment < ActiveRecord::Base
   belongs_to :zone
   belongs_to :schedule
-  has_one :part
+  belongs_to :part
 end
 
