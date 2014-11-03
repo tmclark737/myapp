@@ -7,13 +7,36 @@ class RelampCalc
   end
 
   def total_hours
-    if @equipment.part.part_info_type == 2
+    #define variables
+    part = @equipment.part
+    schedule = @equipment.schedule
+
+    if part.part_info_type == 2
       total_hours = 8760
     else
-      total_hours = 7777
+      if part.light.occ_sensor_ysn
+        powered_pct = 1- part.light.occ_sensor.savings_pct
+      else
+        powered_pct = 1
+      end
+      
+      if schedule.w_day_stop > schedule.w_day_begin
+      #If it is a regular schedule (start time is before stop time.)
+        schedule_diff = ((schedule.w_day_stop-schedule.w_day_begin)*(5 * 52.1775/3600))+((schedule.w_end_stop-schedule.w_end_begin)*(2 * 52.1775/3600))
+      else
+      #For overnight schedules (stop time is the next morning i.e. over night)
+        schedule_diff = (((schedule.w_day_stop-schedule.w_day_begin)/3600)+24)*(5 * 52.1775)+(((schedule.w_end_stop-schedule.w_end_begin)/3600)+24)*(2 * 52.1775)
+      end
     end
+    schedule_diff*powered_pct
   end
 
+
+
+#varTime = (DateDiff("n", wdayStartTime, _
+#                                    wdayStopTime) / 60) * (5 * 52.1775) _
+#                                    + (DateDiff("n", wendStartTime, _
+#                                    wendStopTime) / 60) * (2 * 52.1775)
 
   def year_hours_base
 

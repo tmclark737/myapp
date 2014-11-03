@@ -11,3 +11,5 @@
 Equipment.create ([{:zone_id => 1, :quantity => 3, :years_installed => 5, :existing => 'true', :schedule_id => 10, :part_id => 2 }])
 
 
+duplicating a field:
+light2 = light.dup
