@@ -1,6 +1,6 @@
 class Light < ActiveRecord::Base
   
-
+  belongs_to :occ_sensor
   belongs_to :light_code
   has_many :parts
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141103002723) do
+ActiveRecord::Schema.define(version: 20141103054128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -156,15 +156,15 @@ ActiveRecord::Schema.define(version: 20141103002723) do
   end
 
   create_table "lights", force: true do |t|
-    t.integer  "space_type_id"
+    t.integer  "occ_sensor_id"
     t.integer  "light_code_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "occ_sensor_base"
+    t.boolean  "occ_sensor_ysn"
   end
 
   add_index "lights", ["light_code_id"], name: "index_lights_on_light_code_id", using: :btree
-  add_index "lights", ["space_type_id"], name: "index_lights_on_space_type_id", using: :btree
+  add_index "lights", ["occ_sensor_id"], name: "index_lights_on_occ_sensor_id", using: :btree
 
   create_table "occ_sensors", force: true do |t|
     t.string   "space_type"
