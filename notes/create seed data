@@ -13,3 +13,8 @@ Equipment.create ([{:zone_id => 1, :quantity => 3, :years_installed => 5, :exist
 
 duplicating a field:
 light2 = light.dup
+
+judy = Customer.find(1) 
+judy.phone_number = "1234567890"
+judy.save!
+

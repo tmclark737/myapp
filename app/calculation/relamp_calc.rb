@@ -27,16 +27,10 @@ class RelampCalc
       #For overnight schedules (stop time is the next morning i.e. over night)
         schedule_diff = (((schedule.w_day_stop-schedule.w_day_begin)/3600)+24)*(5 * 52.1775)+(((schedule.w_end_stop-schedule.w_end_begin)/3600)+24)*(2 * 52.1775)
       end
+      total_hours = schedule_diff*powered_pct
     end
-    schedule_diff*powered_pct
   end
 
-
-
-#varTime = (DateDiff("n", wdayStartTime, _
-#                                    wdayStopTime) / 60) * (5 * 52.1775) _
-#                                    + (DateDiff("n", wendStartTime, _
-#                                    wendStopTime) / 60) * (2 * 52.1775)
 
   def year_hours_base
 
