@@ -2,6 +2,20 @@
 
 
  Part.create ([{:install_hrs => 0.25, :part_info_type => 1, :description => 'T8 - 4 Foot 2 Lamp - 32W Fluorescent - Rapid Start Ballast, NLO - 700 Series'}])
+
+  Part.create ([{:install_hrs => 0.25, :hvac_id => 1, :description => 'On/Off Fancoil Unit Control'}])
+
  Light.create ([{:occ_sensor_base => '1', :space_type_id => '1', :light_id => '1'}])
  Hvac.create ([{:kw_saved => 44, :kwh_saved => 555, :therm_saved => 0, :hrs_to_replace => 50000, :hvac_id => 1}])
 
+Equipment.create ([{:zone_id => 1, :quantity => 3, :years_installed => 5, :existing => true, :schedule_id => 10, :part_id => }])
+
+
+    t.integer  "zone_id"
+    t.integer  "quantity"
+    t.integer  "years_installed"
+    t.binary   "existing"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "schedule_id"
+    t.integer  "part_id"
