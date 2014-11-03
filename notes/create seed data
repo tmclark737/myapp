@@ -8,14 +8,6 @@
  Light.create ([{:occ_sensor_base => '1', :space_type_id => '1', :light_id => '1'}])
  Hvac.create ([{:kw_saved => 44, :kwh_saved => 555, :therm_saved => 0, :hrs_to_replace => 50000, :hvac_id => 1}])
 
-Equipment.create ([{:zone_id => 1, :quantity => 3, :years_installed => 5, :existing => true, :schedule_id => 10, :part_id => }])
+Equipment.create ([{:zone_id => 1, :quantity => 3, :years_installed => 5, :existing => 'true', :schedule_id => 10, :part_id => 2 }])
 
 
-    t.integer  "zone_id"
-    t.integer  "quantity"
-    t.integer  "years_installed"
-    t.binary   "existing"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "schedule_id"
-    t.integer  "part_id"
