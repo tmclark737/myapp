@@ -18,6 +18,7 @@ end
  root 'welcome#index'
  get '/sfenvironment', to: redirect('/#')
  get '/benchmarking', to: 'welcome#benchmarking'
+ get '/google20f2c5dc8a027e79.html', to: 'welcome#google20f2c5dc8a027e79.html'
 end
 
 
