@@ -1,8 +1,10 @@
 class Light < ActiveRecord::Base
   
+  
+  #has_many :parts, :as => :partable
   belongs_to :occ_sensor
   belongs_to :light_code
-  has_many :parts
+  #has_many :parts
 
 
   #belongs_to :parts
