@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141103054128) do
+ActiveRecord::Schema.define(version: 20141105235434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -185,7 +185,6 @@ ActiveRecord::Schema.define(version: 20141103054128) do
   add_index "occupants", ["project_id"], name: "index_occupants_on_project_id", using: :btree
 
   create_table "parts", force: true do |t|
-    t.integer  "part_info_type"
     t.integer  "cost"
     t.string   "purchase_url"
     t.string   "picture_url"
@@ -196,6 +195,8 @@ ActiveRecord::Schema.define(version: 20141103054128) do
     t.float    "install_hrs"
     t.integer  "light_id"
     t.integer  "hvac_id"
+    t.integer  "part_info_id"
+    t.string   "part_info_type"
   end
 
   add_index "parts", ["hvac_id"], name: "index_parts_on_hvac_id", using: :btree
