@@ -1,9 +1,20 @@
 class Part < ActiveRecord::Base
-  has_many :equipments
   
-  has_one :part_info, as: :partable
+
+        belongs_to :equipment
+        belongs_to :element, :polymorphic => true
+
+
+
+
+  #has_many :equipments 
+  ###belongs_to :partable 
+  #belongs_to :equipment
+
+  #has_one :part_info, as: :partable
   #belongs_to :partable, :polymorphic => true
   
+  #working the two association way
   #belongs_to :light
   #belongs_to :hvac
   
