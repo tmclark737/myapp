@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141108041845) do
+ActiveRecord::Schema.define(version: 20141108175635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -191,18 +191,12 @@ ActiveRecord::Schema.define(version: 20141108041845) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "install_hrs"
-    t.integer  "light_id"
-    t.integer  "hvac_id"
-    t.integer  "partable_id"
-    t.string   "partable_type"
     t.integer  "equipment_id"
     t.integer  "element_id"
     t.string   "element_type"
   end
 
-  add_index "parts", ["hvac_id"], name: "index_parts_on_hvac_id", using: :btree
   add_index "parts", ["incentive_id"], name: "index_parts_on_incentive_id", using: :btree
-  add_index "parts", ["light_id"], name: "index_parts_on_light_id", using: :btree
 
   create_table "projects", force: true do |t|
     t.string   "address"
