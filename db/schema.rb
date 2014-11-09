@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141109200307) do
+ActiveRecord::Schema.define(version: 20141109214737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,7 +81,6 @@ ActiveRecord::Schema.define(version: 20141109200307) do
   add_index "equipment", ["zone_id"], name: "index_equipment_on_zone_id", using: :btree
 
   create_table "financials", force: true do |t|
-    t.integer  "project_id"
     t.text     "description"
     t.boolean  "has_capex"
     t.integer  "cost_of_capital"
@@ -93,8 +92,6 @@ ActiveRecord::Schema.define(version: 20141109200307) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "financials", ["project_id"], name: "index_financials_on_project_id", using: :btree
 
   create_table "hvac_codes", force: true do |t|
     t.string   "description"
@@ -214,7 +211,10 @@ ActiveRecord::Schema.define(version: 20141109200307) do
     t.string   "owner"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "financial_id"
   end
+
+  add_index "projects", ["financial_id"], name: "index_projects_on_financial_id", using: :btree
 
   create_table "schedules", force: true do |t|
     t.string   "name"

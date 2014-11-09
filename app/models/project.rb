@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-
+has_one :financial
 has_many :occupants, dependent: :destroy
 
 	validates :address, presence: true,

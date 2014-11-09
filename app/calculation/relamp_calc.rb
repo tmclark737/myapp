@@ -33,16 +33,16 @@ class RelampCalc
   end
 
 
-  def equipment_life
-    puts @equipment.part.element_type
-    if @equipment.part.element_type == "Light" then
-      @equipment.part.element.light_code.life*1000
-    else
-      @equipment.part.element.hvac_code.life*1000
-    end
-  end
+  def part_cost
+    @equipment.part.cost
+    project = @equipment.zone.occupant.project  
 
 
+#    dRelampBaseCostYr = Round((rsQry.Fields("subRreplaceEquipCost") + (rsQry.Fields("FiHourlyMaintCost") * rsQry.Fields("subRreplaceInstallHrs"))) _
+ #                                   * rsQry.Fields("EIDqtyBase") * dRelampBaseYrQty _
+ #                                   + (rsQry.Fields("subRreplaceBallastCost") + (rsQry.Fields("FiHourlyMaintCost") * rsQry.Fields("subRreBallastInstallHrs"))) _
+ #                                   * rsQry.Fields("EIDqtyBase") * dReballastBaseYrQty, 0)
   
+  end
 
 end
