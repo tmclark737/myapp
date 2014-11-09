@@ -29,3 +29,10 @@ rails generate model Light_code check_date:date fixture_description:string fixtu
 rails generate model Occ_sensor space_type:string savings_pct:float
 
 
+rails generate model EquipmentElement equipment_element:references equipment:references element:references 
+
+
+class EquipmentElement < ActiveRecord::Base
+  belongs_to :article
+  belongs_to :element, :polymorphic => true
+end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141108184036) do
+ActiveRecord::Schema.define(version: 20141109164856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 20141108184036) do
     t.string   "model"
     t.string   "serial"
     t.string   "condition"
-    t.integer  "hours_hvac_life"
+    t.integer  "life"
     t.string   "cooling_capacity"
     t.string   "cooling_efficiency"
     t.string   "heating_capacity"
@@ -142,7 +142,7 @@ ActiveRecord::Schema.define(version: 20141108184036) do
     t.string   "note"
     t.integer  "design_lumens"
     t.integer  "cri"
-    t.integer  "lamp_life_hours"
+    t.integer  "life"
     t.integer  "ballast_life_hours"
     t.string   "base_type"
     t.string   "lamp_type"

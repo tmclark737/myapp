@@ -33,9 +33,12 @@ class RelampCalc
   end
 
 
-  def year_hours_base
-
+  def equipment_life
+    if @equipment.part.element_type = "Light"
+    
+    else
+    
+    end
   end
 
-#rsRelamp.Fields("rlmpYrHrsBase") = fncTotalHrs(rsQry.Fields("schBaseWdayStart"), rsQry.Fields("schBaseWdayStop"), rsQry.Fields("schBaseWendStart"), rsQry.Fields("schBaseWendStop"), rsQry.Fields("EIDequipTypeID"), -1, rsQry.Fields("lightOccSensorBase"), rsQry.Fields("EEMoccSensorProp"), rsQry.Fields("OCCssSavings"))
 end
