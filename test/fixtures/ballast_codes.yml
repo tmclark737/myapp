@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  ballast_factor: 1.5
+  pic: MyString
+
+two:
+  description: MyString
+  ballast_factor: 1.5
+  pic: MyString
