@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141109173707) do
+ActiveRecord::Schema.define(version: 20141109190342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,7 +87,6 @@ ActiveRecord::Schema.define(version: 20141109173707) do
     t.string   "model"
     t.string   "serial"
     t.string   "condition"
-    t.integer  "life"
     t.string   "cooling_capacity"
     t.string   "cooling_efficiency"
     t.string   "heating_capacity"
@@ -99,8 +98,6 @@ ActiveRecord::Schema.define(version: 20141109173707) do
     t.string   "thermostat_type"
     t.string   "heat_setpoint"
     t.string   "cool_setpoint"
-    t.integer  "replace_equip_cost"
-    t.decimal  "replace_install_hours"
     t.string   "pic_link"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -142,14 +139,8 @@ ActiveRecord::Schema.define(version: 20141109173707) do
     t.string   "note"
     t.integer  "design_lumens"
     t.integer  "cri"
-    t.integer  "life"
-    t.integer  "ballast_life_hours"
     t.string   "base_type"
     t.string   "lamp_type"
-    t.integer  "relamp_glass_cost"
-    t.float    "relamp_install_hours"
-    t.integer  "replace_ballast_cost"
-    t.float    "reballast_install_hours"
     t.string   "pic_link"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -195,6 +186,7 @@ ActiveRecord::Schema.define(version: 20141109173707) do
     t.float    "install_hrs"
     t.integer  "element_id"
     t.string   "element_type"
+    t.integer  "life"
   end
 
   add_index "parts", ["incentive_id"], name: "index_parts_on_incentive_id", using: :btree

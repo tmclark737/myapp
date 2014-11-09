@@ -34,11 +34,15 @@ class RelampCalc
 
 
   def equipment_life
-    if @equipment.part.element_type = "Light"
-    
+    puts @equipment.part.element_type
+    if @equipment.part.element_type == "Light" then
+      @equipment.part.element.light_code.life*1000
     else
-    
+      @equipment.part.element.hvac_code.life*1000
     end
   end
+
+
+  
 
 end
