@@ -36,3 +36,6 @@ class EquipmentElement < ActiveRecord::Base
   belongs_to :article
   belongs_to :element, :polymorphic => true
 end
+
+rails generate model Ballast ballast_code:references
+rails generate model BallastCode description:string ballast_factor:float pic:string

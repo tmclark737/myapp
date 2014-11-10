@@ -52,4 +52,27 @@ class RelampCalc
   
   end
 
+  def light_energy
+    
+    light_code = @equipment.part.element.light_code
+    light_code.kw_per_fixture*@equipment.quantity*total_hours
+
+  end
+
+  def light_demand
+    light_code = @equipment.part.element.light_code
+    light_code.kw_per_fixture*@equipment.quantity
+  end
+
+  def light_energy_dollars
+  UtilityCalc.new.energy_rate
+
+  #utlity_rate = @equipment.zone.occupant.utility_rate
+  #utility_rate.
+#rsRelamp.Fields("rlmpEnergyDollars") = rsRelamp.Fields("rlmpEnergySavings") * rsQry.Fields("utlEnergyRate")
+  end
+
+
+
+
 end
