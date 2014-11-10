@@ -8,7 +8,7 @@ class UtilityCalc
     puts "Please enter the equipment_id:"
     equipment_id = gets.chomp
     @equipment = Equipment.find(equipment_id)
-    puts "hootay hoo - this is how we do it!"
+    puts "hootay hoo - this is how we do"
   end
 
   def peak_begin()

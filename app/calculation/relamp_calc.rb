@@ -4,6 +4,10 @@ class RelampCalc
     puts "Please enter the equipment_id:"
     equipment_id = gets.chomp
     @equipment = Equipment.find(equipment_id)
+
+    #Call instance of Utility Calc
+    @utility_calc = UtilityCalc.new
+    @utility_calc.equip_id
   end
 
   def total_hours
@@ -65,14 +69,28 @@ class RelampCalc
   end
 
   def light_energy_dollars
-  c = UtilityCalc.new
-  c.equip_id
-
-  #utlity_rate = @equipment.zone.occupant.utility_rate
-  #utility_rate.
-#rsRelamp.Fields("rlmpEnergyDollars") = rsRelamp.Fields("rlmpEnergySavings") * rsQry.Fields("utlEnergyRate")
+    @utility_calc.energy_rate * light_energy
   end
 
+  def light_demand_dollars
+    @utility_calc.demand_rate * light_demand
+  end
+
+  def eem_cost
+    if @equipment.existing == false then
+      part = @equipment.part
+      financial = @equipment.zone.occupant.project.financial
+      equipment = @equipment
+      eem_cost =  (part.cost+(financial.hourly_maintenance_cost*part.install_hrs))*equipment.quantity
+    else
+      eem_cost = 0
+  end
+
+
+#rsRelamp.Fields("rlmpBaseCost") = ((rsQry.Fields("EEMequipCost") + rsQry.Fields("EEMinstallCost")) * rsQry.Fields("EIDqtyProp")) _
+ #                                    + ((rsQry.Fields("EEMAddOnOptionEquipCost") + rsQry.Fields("EEMAddOnOptionInstallCost")) * rsQry.Fields("EIDAddOnOptionQty"))
+
+  end
 
 
 
