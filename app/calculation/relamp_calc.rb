@@ -32,16 +32,23 @@ class RelampCalc
     end
   end
 
+  def replace_count(year)
+    last_year = year -1
+    part = @equipment.part
+    
 
-  def part_cost
-    @equipment.part.cost
-    project = @equipment.zone.occupant.project  
+    current_count = ((total_hours*(year+@equipment.years_installed))/part.life).to_i
+    previous_count = ((total_hours*(last_year+@equipment.years_installed))/part.life).to_i
+    current_count-previous_count
+  end
 
 
-#    dRelampBaseCostYr = Round((rsQry.Fields("subRreplaceEquipCost") + (rsQry.Fields("FiHourlyMaintCost") * rsQry.Fields("subRreplaceInstallHrs"))) _
- #                                   * rsQry.Fields("EIDqtyBase") * dRelampBaseYrQty _
- #                                   + (rsQry.Fields("subRreplaceBallastCost") + (rsQry.Fields("FiHourlyMaintCost") * rsQry.Fields("subRreBallastInstallHrs"))) _
- #                                   * rsQry.Fields("EIDqtyBase") * dReballastBaseYrQty, 0)
+  def part_cost(year)
+    part = @equipment.part
+    financial = @equipment.zone.occupant.project.financial
+    equipment = @equipment
+
+    (part.cost+(financial.hourly_maintenance_cost*part.install_hrs))*equipment.quantity*replace_count(year)
   
   end
 
