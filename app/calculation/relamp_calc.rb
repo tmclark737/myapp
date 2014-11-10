@@ -65,7 +65,8 @@ class RelampCalc
   end
 
   def light_energy_dollars
-  UtilityCalc.new.energy_rate
+  c = UtilityCalc.new
+  c.equip_id
 
   #utlity_rate = @equipment.zone.occupant.utility_rate
   #utility_rate.
