@@ -1,8 +1,21 @@
 #Utility Calculation
 
 
-class UtilityCalc
+class UtilityRateCalc
+  def initialize(equipment)
+    @equipment = equipment
+  end
 
+  def demand_rate
+    utility = @equipment.zone.occupant.utility_rate
+    ((6*utility.summer_demand) + (6*utility.winter_demand))/100
+  end
+
+  def energy_rate
+    avoided_energy_cost/total_hours
+  end
+
+  private
 
   def equip_id()
     puts "Please enter the equipment_id:"
@@ -90,14 +103,9 @@ class UtilityCalc
     ((peak_hours * utility.summer_energy_peak) + (part_hours_summer * utility.summer_energy_part) + (off_peak_hours_summer * utility.summer_energy_off) + (part_hours_winter * utility.winter_energy_part) + (off_peak_hours_winter * utility.winter_energy_off))/100000
   end
 
-  def demand_rate
-    utility = @equipment.zone.occupant.utility_rate
-    ((6*utility.summer_demand) + (6*utility.winter_demand))/100
-  end
 
-  def energy_rate
-    avoided_energy_cost/total_hours
-  end
+
+
 
 
 end
