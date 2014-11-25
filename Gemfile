@@ -33,6 +33,8 @@ end
 
 gem 'devise'
 
+gem 'newrelic_rpm'
+
 ruby "2.0.0"
 
 
