@@ -34,6 +34,7 @@ end
 gem 'devise'
 
 gem 'newrelic_rpm'
+gem 'google-analytics-rails'
 
 ruby "2.0.0"
 
